@@ -30,6 +30,8 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
+
 /* Style the slide content (images, text, etc.) */
 .carousel-slide img {
     max-width: 100%;
@@ -37,6 +39,7 @@
     object-fit: cover;
     border-radius: 8px;
 }
+
 
 /* Style the legend (optional) */
 .carousel-legend {

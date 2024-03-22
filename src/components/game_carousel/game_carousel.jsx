@@ -1,5 +1,5 @@
 // src/components/GameCarousel.js
-import React from 'react';
+import React, { useState } from 'react';
 import photo1 from "./assets/photo1.svg";
 import photo2 from "./assets/photo2.svg";
 import leftArrow from "./assets/leftArrow.svg";
@@ -8,6 +8,23 @@ import rightArrow from "./assets/rightArrow.svg";
 import "./game_carousel.css";
 
 const GameCarousel = () => {
+
+    const initialSlides = [photo1, photo2]; // Define your slide images
+    const [slides, setSlides] = useState(initialSlides); // State to track current slide index
+
+    const nextSlide = () => {
+        const newSlides = [slides[1], slides[0]]; // Swap slides
+        setSlides(newSlides);
+    };
+
+    const prevSlide = () => {
+        const newSlides = [slides[1], slides[0]]; // Swap slides
+        setSlides(newSlides);
+    };
+
+
+    console.log(slides);
+
     return (
         <>
             <div className="carousel-container">
@@ -16,19 +33,23 @@ const GameCarousel = () => {
                     <h2>Ready to unlock your potentials in a world of fun?</h2>
                     <button className='carousel-button'>GET STARTED</button>
                 </div>
-
-                <div className="carousel-slide">
-                    <img src={photo1} alt="Game 1" />
+                {slides.map((slide) => (
+                    <div className="carousel-slide">
+                        <img src={slide} />
+                    </div>
+                ))}
+                {/* <div className="carousel-slide">
+                    <img src={slides[currentSlide]} alt={`Game`} />
                 </div>
                 <div className="carousel-slide">
-                    <img src={photo2} alt="Game 2" />
-                </div>
+                    <img src={slides[currentSlide + 1]} alt={`Game`} />
+                </div> */}
                 {/* Add more game slides as needed */}
 
             </div>
             <div className='carousel-arrow'>
-                <img src={leftArrow} alt="left arrow"></img>
-                <img src={rightArrow} alt="right arrow"></img>
+                <img src={leftArrow} alt="left arrow" onClick={prevSlide} />
+                <img src={rightArrow} alt="right arrow" onClick={nextSlide} />
             </div>
         </>
 
