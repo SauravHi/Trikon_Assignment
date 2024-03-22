@@ -1,0 +1,30 @@
+.text1_style {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 48px;
+    /* identical to box height, or 160% */
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 5%;
+}
+
+.text2_subSection {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.cards_container {
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 20px;
+}

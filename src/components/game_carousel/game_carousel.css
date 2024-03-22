@@ -1,0 +1,67 @@
+/* src/CarouselStyles.css */
+
+/* Style the entire carousel container */
+.carousel-container {
+    /* max-width: 100%; */
+    /* Adjust as needed */
+    /* margin: 0 auto; */
+    display: flex;
+}
+
+.carousel-data {
+    display: flex;
+    flex-direction: column;
+    /* height: 488px; */
+    width: 388px;
+    justify-content: center;
+    margin-left: 7%;
+}
+
+/* Style the carousel slides */
+.carousel-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 488px; */
+    width: 388px;
+    /* Set the desired height */
+    /* Change to your preferred background color */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the slide content (images, text, etc.) */
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Style the legend (optional) */
+.carousel-legend {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Style the navigation buttons (optional) */
+.carousel-button {
+    background-color: #BEF56E;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 220px;
+    height: 51px;
+}
+
+.carousel-arrow {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
