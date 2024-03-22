@@ -23,7 +23,7 @@ const GameCarousel = () => {
     };
 
 
-    console.log(slides);
+    // console.log(slides);
 
     return (
         <>
@@ -34,7 +34,7 @@ const GameCarousel = () => {
                     <button className='carousel-button'>GET STARTED</button>
                 </div>
                 {slides.map((slide) => (
-                    <div className="carousel-slide">
+                    <div className="carousel-slide" key={slide}>
                         <img src={slide} />
                     </div>
                 ))}
@@ -48,8 +48,8 @@ const GameCarousel = () => {
 
             </div>
             <div className='carousel-arrow'>
-                <img src={leftArrow} alt="left arrow" onClick={prevSlide} />
-                <img src={rightArrow} alt="right arrow" onClick={nextSlide} />
+                <img src={leftArrow} alt="left arrow" style={{ cursor: "pointer" }} onClick={prevSlide} />
+                <img src={rightArrow} alt="right arrow" style={{ cursor: "pointer" }} onClick={nextSlide} />
             </div>
         </>
 

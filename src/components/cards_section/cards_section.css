@@ -13,13 +13,35 @@
 .text2_subSection {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 30px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
     color: #FFFFFF;
+}
+
+.text2_subSection p {
+    cursor: pointer;
+}
+
+.text2_subSection p.active {
+    /* Auto layout */
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    /* padding: 6px 16px; */
+    gap: 30px;
+
+    width: 51px;
+    height: 29px;
+
+    /* Medley/Accent */
+    background: #F68E5F;
+    border-radius: 48px;
 }
 
 .cards_container {
